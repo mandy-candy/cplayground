@@ -8,9 +8,9 @@ int main()
     float totalOverHours;
     float grossPay;
     float totalHours;
-    float afterTax1;
-    float afterTax2;
-    float afterTax3;
+    float tax1, tax2, tax3;
+    float afterTax1, afterTax2, afterTax3;
+
     float netPay;
 
     if (userHours > 40)
@@ -35,18 +35,24 @@ int main()
     if (grossPay > 450)
     {
         afterTax1 = (300.0 / 100.0) * 85.0;
+        tax1 = (300.0 / 100.0) * 15.0;
         afterTax2 = (150.0 / 100.0) * 80.0;
+        tax2 = (150.0 / 100.0) * 20.0;
         afterTax3 = ((grossPay - 450.0) / 100) * 75.0;
+        tax3 = ((grossPay - 450.0) / 100) * 25.0;
     }
     else
     {
         afterTax1 = (300.0 / 100.0) * 85.0;
+        tax1 = (300.0 / 100.0) * 15.0;
         afterTax2 = ((grossPay - 300.0) / 100.0) * 80.0;
+        tax2 = (150.0 / 100.0) * 20.0;
+        tax3 = 0;
     }
     
-     printf("afterTax1: %.1f\n", afterTax1);
-     printf("afterTax2: %.1f\n", afterTax2);
-     printf("afterTax3: %.1f\n", afterTax3);
+     printf("afterTax1: %.1f tax1: %.1f\n", afterTax1, tax1);
+     printf("afterTax2: %.1f tax2: %.1f\n", afterTax2, tax2);
+     printf("afterTax3: %.1f tax3: %.1f\n", afterTax3, tax3);
 
     netPay = afterTax1 + afterTax2 + afterTax3;
     printf("Net pay: %.1f\n", netPay);
