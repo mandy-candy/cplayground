@@ -32,10 +32,20 @@ int main()
     grossPay = basicPayRate * totalHours;
     printf("Total calculated gross pay: %.1f\n", grossPay);
 
+    int afterTaxCalculation1() {
+        afterTax1 = (300.0 / 100.0) * 85.0;
+        return 0;
+    }
+
+    int taxCalculation1() {
+        tax1 = (300.0 / 100.0) * 15.0;
+        return 0;
+    }
+
     if (grossPay > 450)
     {
-        afterTax1 = (300.0 / 100.0) * 85.0;
-        tax1 = (300.0 / 100.0) * 15.0;
+        afterTaxCalculation1();
+        taxCalculation1();
         afterTax2 = (150.0 / 100.0) * 80.0;
         tax2 = (150.0 / 100.0) * 20.0;
         afterTax3 = ((grossPay - 450.0) / 100) * 75.0;
@@ -43,8 +53,8 @@ int main()
     }
     else
     {
-        afterTax1 = (300.0 / 100.0) * 85.0;
-        tax1 = (300.0 / 100.0) * 15.0;
+        afterTaxCalculation1();
+        taxCalculation1();
         afterTax2 = ((grossPay - 300.0) / 100.0) * 80.0;
         tax2 = ((grossPay - 300.0) / 100.0) * 20.0;
         afterTax3 = 0.0;
