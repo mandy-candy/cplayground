@@ -11,7 +11,7 @@ const char message[] = "This is a message";
 
 /*
 *    'x' = basic type char
-*    "x" = derived type, array of char. It's basically the x and \0, the null character
+*    "x" = derived type, pointer to array of char. It's basically the x and \0, the null character
 */
 
 
