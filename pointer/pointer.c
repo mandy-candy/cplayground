@@ -11,13 +11,23 @@
 int main(void)
 {   
 
-    // initializing pointer
+    // variable
     int number = 99;
- 
-    int *pNumber = &number;
     int result = 0;
-
+    // initializing pointer to variable number using the &
+    pNumber = &number;
+    // *pNumber is the value the pointer is pointing to
     result = *pNumber + 1;
+
+    // define a constant value of pointer
+    int value = 5254;
+    const int *pValue = &value;
+    printf("The value from pointer is: %d\n", *pValue);
+    // define a constant pointer address
+    int value2 = 4;
+    int *const pValue2 = &value2;
+    printf("The value from pointer is: %d\n", *pValue2);
+
 
     printf("The result is: %d\n", result);
     // value which the pointer is pointing
