@@ -4,12 +4,13 @@
 
 int main()
 {
-    printf("%zd\n", sizeof(int));
-    printf("%zd\n", sizeof(char));
-    printf("%zd\n", sizeof(long));
-    printf("%zd\n", sizeof(long long));
-    printf("%zd\n", sizeof(double));
-    printf("%zd\n", sizeof(long double));
+    printf("Int : %zd\n", sizeof(int));
+    printf("Char : %zd\n", sizeof(char));
+    printf("Float : %zd\n", sizeof(float));
+    printf("Long : %zd\n", sizeof(long));
+    printf("Long long : %zd\n", sizeof(long long));
+    printf("Double : %zd\n", sizeof(double));
+    printf("Long double : %zd\n", sizeof(long double));
 
     return 0;
 }
