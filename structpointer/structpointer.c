@@ -14,6 +14,13 @@ struct intPtrs
     int *p2;
 };
 
+/*
+
+foo->bar is equivalent to (*foo).bar,
+ i.e. it gets the member called bar from the struct that foo points to.
+
+
+*/
 
 int main()
 {
@@ -22,7 +29,9 @@ int main()
     
     datePtr = &today;
     
-    datePtr->day = 9;
+    (*datePtr).day = 9;
+
+   //() datePtr->day = 9;
     datePtr->month = 10;
     datePtr->year = 2020;
 

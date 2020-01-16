@@ -6,6 +6,7 @@ int main(void)
 {
     char *str;
 
+    // malloc allocates memory, calloc allocates & initializes all block to zero
     //initial memory allocation
     str = (char *) malloc(15 * sizeof(char));
     strcpy(str, "mandy");

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-   // initializing pointer to NULL
+   // initializing pointer to NULL amnd
     int *pNumber = NULL;
 
 
@@ -14,8 +14,10 @@ int main(void)
     // variable
     int number = 99;
     int result = 0;
+
     // initializing pointer to variable number using the &
     pNumber = &number;
+    
     // *pNumber is the value the pointer is pointing to
     result = *pNumber + 1;
 
