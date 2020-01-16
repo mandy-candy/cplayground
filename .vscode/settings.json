@@ -1,8 +1,0 @@
-{
-    "code-runner.executorMap": {
-        "c": "cd $dir && gcc -o $fileNameWithoutExt.exe *.c && $fileNameWithoutExt.exe"
-    },
-    "files.associations": {
-        "stdio.h": "c"
-    }
-}
