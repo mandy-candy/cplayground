@@ -12,7 +12,8 @@
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopOnEntry": true,
-            "terminal": "console"
+            "terminal": "console",
+            "preLaunchTask": "clang build active file"
         },
         {
             "name": "Win (gcc.exe) build and debug active file",
