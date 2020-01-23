@@ -6,16 +6,13 @@
     "configurations": [
         {
             "name": "Mac (lldb) build and debug active file",
-            "type": "cppdbg",
+            "type": "lldb",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
-            "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": true,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb"
+            "stopOnEntry": true,
+            "terminal": "console"
         },
         {
             "name": "Win (gcc.exe) build and debug active file",
