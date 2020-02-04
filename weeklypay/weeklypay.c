@@ -24,6 +24,8 @@ int main()
         totalOverHours = 0;
     }
 
+    printf("Test\n");
+
     printf("Total normal hours: %d, Total over hours: %.1f\n", totalNormalHours, totalOverHours);
 
     totalHours = totalNormalHours + totalOverHours;

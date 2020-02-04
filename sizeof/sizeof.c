@@ -11,6 +11,7 @@ int main()
     printf("Long long : %zd\n", sizeof(long long));
     printf("Double : %zd\n", sizeof(double));
     printf("Long double : %zd\n", sizeof(long double));
+    printf("Word : %zd\n", sizeof(_WORDSIZE_H));
 
     return 0;
 }
