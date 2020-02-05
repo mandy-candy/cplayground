@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-
+// typedef
 typedef struct sTimer
 {
     int targetTime;
@@ -20,12 +20,14 @@ tTimer *timerCreate(int startTime, int targetTime)
     return self;
 }
 
+// destructor
 void timerDestroy(tTimer *self)
 {
     free(self);
     self = NULL;
 }
 
+// counter function
 int timerCountUp(tTimer *self, bool *SUCCESS)
 {
     if (self->counterValue < self->targetTime)
@@ -40,9 +42,10 @@ int timerCountUp(tTimer *self, bool *SUCCESS)
         *SUCCESS = false;
         return 0;
     }
-    
+ 
 }
 
+// main loop
 int main(int argc, char const *argv[])
 {
     tTimer *timer1 = timerCreate(10, 100);
@@ -50,31 +53,28 @@ int main(int argc, char const *argv[])
 
     while (true)
     {
-        bool timer1SUCCESS;
-        bool timer2SUCCESS;
-        int time1 = timerCountUp(timer1, &timer1SUCCESS);
-        int time2 = timerCountUp(timer2, &timer2SUCCESS);
+        bool timer1Success;
+        bool timer2Success;
+        int time1 = timerCountUp(timer1, &timer1Success);
+        int time2 = timerCountUp(timer2, &timer2Success);
 
-        // if(!timer1SUCCESS && !timer2SUCCESS)
-        if(timer1SUCCESS == false && timer2SUCCESS == false)
+        // if(!timer1Success && !timer2Success)
+        if(timer1Success == false && timer2Success == false)
         {
-
             break;
-
-                /*
-                # as long as time is not None print
-                if time1 is not None:
-                 print("time1", time1)
-
-                if time2 is not None:
-                print("time2", time2)
-                */
         }
 
+        if (timer1Success)
+        {
+            printf("Time 1 %d\n", time1);
+        }
+
+        if (timer2Success)
+        {
+            printf("Time 2 %d\n", time2);
+        }
     }
     
-
-
     timerDestroy(timer1);
     timerDestroy(timer2);
     return 0;
